@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type = text/javascript>
+function validateForm() {
+  var x = document.forms["myForm"]["firstName"].value;
+  var y = document.forms["myForm"]["lastName"].value;
+  var z = document.forms["myForm"]["email"].value;
+
+  if (x == ""|| y == "" || z == "") {
+    alert("First name, Last name, and Email address must be filled out");
+    return false;
+  }
+}
+
+</script>
+</head>
+<body>
+
+	<!--
+		Author: Alaeldeen Alkenani
+		Date: 10/06/2020
+		Purpose: The purpose of this webpage is to ask the user to input their first 		 name, last name, and email using JavaScript validation. The page also contains a button. The styling for   	  the page is pulled from styles.css.
+	-->
+
+	<!--Title of the tab-->
+	<title>Alaeldeen Alkenani & Co.</title>
+	
+	<!--Linking the CSS stylesheet to the HTML-->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+	<!--Creating a "mainTitle" division incase I need to specify it later, such as using it in CSS-->
+	<div id="mainTitle">
+		<!--Main header with emphasis on the company name-->
+		<h1><em>Alaeldeen Alkenani & Co.</em> - Customer Information</h1>
+	</div>
+	
+	<!--A new division with the id "mainForm" incase I need to reference it later, especially in the CSS-->
+	<div id="mainForm">
+		<!--Starting a form element-->
+	<form name="myForm"onsubmit="return validateForm()">
+			<!--Creating three labels and three inputs for the required inputs. Names and classes are used for future reference if needed (Good practice). Breaks are used to for new lines between new elements-->
+			<label for="firstName">First Name: </label><br><input type="text" name="firstName" class="inputData"><br>
+			<label for="lastName">Last Name: </label><br><input type="text" name="lastName" class="inputData"><br>
+			<label for="email">Email Address: </label><br><input type="text" name="email" class="inputData"><br>
+			
+			<!--Submit button with an id of "submitButton" for reference in CSS. The text is bolded.-->
+			<button id="submitButton"><strong>Submit Data</strong></button>
+		
+		<!--form end-->
+		</form>
+	<!--division end-->
+	</div>
+<!--body end-->
+</body>
+
+<!--html end-->
+</html>
